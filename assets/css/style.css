@@ -272,6 +272,14 @@ section { padding-block: clamp(3rem, 5vw, 5.5rem); }
   position: relative;
   overflow: hidden;
 }
+.property-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.property-card:hover .property-media img { transform: scale(1.04); }
 .property-body { padding: 1.8rem; display: flex; flex-direction: column; gap: 0.8rem; flex: 1; }
 .property-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.3rem; }
 .tag {
@@ -342,7 +350,16 @@ section { padding-block: clamp(3rem, 5vw, 5.5rem); }
   overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .gallery-grid > div:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.gallery-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.gallery-grid.cols-2 > div:nth-child(1) { grid-column: span 1; grid-row: span 1; }
+.gallery-grid.plain > div:nth-child(1) { grid-column: span 1; grid-row: span 1; }
 
 /* ---------- Info / practical page ---------- */
 .info-grid {
